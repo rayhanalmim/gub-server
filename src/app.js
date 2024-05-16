@@ -10,7 +10,9 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' })); 
 
 const student = require("./routes/students");
+const admin = require("./routes/admin");
 app.use(student);
+app.use(admin);
 
 app.get("/", (req, res) => {
     res.send("student Server is Running");
